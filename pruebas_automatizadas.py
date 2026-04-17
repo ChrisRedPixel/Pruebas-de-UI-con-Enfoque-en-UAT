@@ -30,12 +30,12 @@ def uat_1_campos_vacios():
 
 def uat_2_correo_invalido():
     driver.refresh()
-    time.sleep(1)
+    time.sleep(2)
     driver.find_element(By.ID, "nombre").send_keys("Ana Torres")
     driver.find_element(By.ID, "correo").send_keys("ana@")
     Select(driver.find_element(By.ID, "curso")).select_by_value("ui")
     driver.find_element(By.ID, "btnEnviar").click()
-    time.sleep(1)
+    time.sleep(2)
     mensaje = driver.find_element(By.ID, "mensaje").text
     registrar_resultado(
         "UAT-2",
